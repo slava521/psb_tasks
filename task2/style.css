@@ -1,0 +1,70 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200px;
+    padding: 15px;
+    background: #7c7c7c;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.btn {
+    background-color: lightgrey;
+    box-shadow: 3px 3px 4px rgb(43, 43, 43);
+    border: 0;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    transition: all 50ms ease;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: none;
+    cursor: default;
+}
+
+.toWrite {
+    background-color: #ff9671;
+}
+
+.double {
+    width: 105px;
+}
+
+.field {
+    width: 195px;
+    height: 40px;
+    text-align: end;
+    padding: 10px;
+    font-size: 16px;
+    cursor: text;
+}
+
+.field:active {
+    cursor: text;
+    box-shadow: 3px 3px 4px rgb(43, 43, 43);
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: red;
+    font-size: 11px;
+    line-height: 30px;
+    pointer-events: none;
+}
