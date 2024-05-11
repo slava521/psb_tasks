@@ -57,7 +57,7 @@ const countCheck = () => {
                         isBracketsClosed = true
                     }
                 } else if (OPERANDS.indexOf(expression[i]) !== -1) {
-                    if (currentNum === '') {
+                    if (currentNum === '' && expression[i] !== '-') {
                         throw 'Пустое число перед операндом на позиции ' + (i + 1)
                     }
                     currentNum = ''
@@ -82,10 +82,15 @@ equals.onclick = () => {
     try {
         countCheck()
         const result = eval(field.value)
-        if (result.toString() !== 'NaN' && result.toString() !== 'Infinity') {
+        if (result.toString() !== 'NaN' && result.toString() !== 'Infinity' && result.toString() !== '-Infinity') {
             field.value = result
         } else {
-            throw `Получился нечисловой ответ "${result.toString() === 'NaN' ? 'Несуществующее число' : 'Бесконечность'}"`
+            throw `Получился нечисловой ответ "${result.toString() === 'NaN'
+                ? 'Несуществующее число'
+                : result.toString()[0] === '-'  
+                    ? 'Отрицательная бесконечность'
+                    : 'Бесконечность'
+            }"`
         }
     } catch (e) {
         error.innerHTML = typeof e === 'string' ? e : 'Неправильное выражение, ищи сам'
