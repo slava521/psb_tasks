@@ -3,12 +3,6 @@
     background: aliceblue;
 }
 
-@media (max-width: 768px) {
-    :root {
-        font: 400 11px "Roboto", sans-serif;
-    }
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -41,11 +35,18 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 70%;
+    height: 100%;
     width: 100%;
     border: 0;
     border-bottom: 2px solid black;
+    padding-top: 20px;
     z-index: 0;
+}
+
+.form__input__field:focus-visible {
+    border: 0;
+    border-bottom: 2px solid #a82d00;
+    outline: 0;
 }
 
 .form__input__label {
@@ -106,4 +107,106 @@
 
 .status__screen--error {
     color: #ff0c0c;
+}
+
+.simulation {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.simulation__column {
+    width: 120px;
+    max-width: 32%;
+}
+
+.simulation__column img {
+    width: 100%;
+}
+
+.cat-face {
+    animation-duration: 1.5s;
+    animation-name: shaking;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    height: 150px;
+    top: 30px;
+    left: 50%;
+    z-index: 9;
+}
+
+.food {
+    animation-duration: 0.5s;
+    animation-name: shaking;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    z-index: 9;
+}
+
+.bowl {
+    top: 100px;
+    left: 50%;
+    position: absolute;
+    z-index: 10;
+    height: 200px;
+    transform: translateX(-50%);
+}
+
+@keyframes shaking {
+    0% {
+        transform: translate(-50%, 10px);
+    }
+    50% {
+        transform: translate(-50%, -10px);
+    }
+    100% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    :root {
+        font: 400 11px "Roboto", sans-serif;
+    }
+
+    .food {
+        left: 45%;
+        height: 75px;
+    }
+
+    .cat-face {
+        height: 100px;
+    }
+
+    .bowl {
+        top: 80px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 426px) {
+    .food {
+        left: 45%;
+        height: 60px;
+    }
+
+    .cat-face {
+        height: 80px;
+    }
+
+    .bowl {
+        top: 70px;
+        height: 100px;
+    }
 }
