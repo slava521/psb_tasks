@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Котики кушают!!</h1>
+    <form id="form" class="form">
+        <div class="form__input">
+            <label for="n" class="form__input__label">Кол-во котиков</label>
+            <input id="n" class="form__input__field" type="number" placeholder="Заполни(" min="1" value="1"
+                   required>
+        </div>
+        <div class="form__input">
+            <label for="b" class="form__input__label">Кол-во корма на котика</label>
+            <input id="b" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+                   value="1" required>
+        </div>
+        <div class="form__input">
+            <label for="m" class="form__input__label">Вместительность миски</label>
+            <input id="m" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+                   value="1" required>
+        </div>
+        <div class="form__input">
+            <label for="t" class="form__input__label">Сколько секунд ест котик</label>
+            <input id="t" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+                   value="1" required>
+        </div>
+        <div class="form__input">
+            <label for="r" class="form__input__label">Сколько секунд бабушка пополняет корм</label>
+            <input id="r" class="form__input__field" type="number" placeholder="Заполни("
+                   min="1" value="1" required>
+        </div>
+        <input type="submit" value="Запустить симуляцию" class="form__submit" id="submitButton">
+    </form>
+    <div class="status">
+        <span class="status__title">Статус:</span>
+        <div class="status__screen">
+            <code id="status"></code>
+        </div>
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
