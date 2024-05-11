@@ -1,9 +1,9 @@
 const form = document.querySelector('#form')
-const n = document.querySelector('#n')
-const b = document.querySelector('#b')
-const m = document.querySelector('#m')
-const t = document.querySelector('#t')
-const r = document.querySelector('#r')
+const n = document.querySelector('#n') //Кол-во котиков
+const b = document.querySelector('#b') //Кол-во корма на котика
+const m = document.querySelector('#m') //Вместительность миски
+const t = document.querySelector('#t') //Сколько секунд ест котик
+const r = document.querySelector('#r') //Сколько секунд бабушка пополняет корм
 const submitButton = document.querySelector('#submitButton')
 
 const status = document.querySelector('#status')
