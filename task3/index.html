@@ -15,27 +15,27 @@
     <form id="form" class="form">
         <div class="form__input">
             <label for="n" class="form__input__label">Кол-во котиков</label>
-            <input id="n" class="form__input__field" type="number" placeholder="Заполни(" min="1" value="1"
+            <input id="n" class="form__input__field" type="number" placeholder="Заполни(" min="1" max="100" value="1"
                    required>
         </div>
         <div class="form__input">
             <label for="b" class="form__input__label">Кол-во корма на котика</label>
-            <input id="b" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+            <input id="b" class="form__input__field" type="number" placeholder="Заполни(" min="1" max="9007199254740991"
                    value="1" required>
         </div>
         <div class="form__input">
             <label for="m" class="form__input__label">Вместительность миски</label>
-            <input id="m" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+            <input id="m" class="form__input__field" type="number" placeholder="Заполни(" min="1" max="9007199254740991"
                    value="1" required>
         </div>
         <div class="form__input">
             <label for="t" class="form__input__label">Сколько секунд ест котик</label>
-            <input id="t" class="form__input__field" type="number" placeholder="Заполни(" min="1"
+            <input id="t" class="form__input__field" type="number" placeholder="Заполни(" min="1" max="3600"
                    value="1" required>
         </div>
         <div class="form__input">
             <label for="r" class="form__input__label">Сколько секунд бабушка пополняет корм</label>
-            <input id="r" class="form__input__field" type="number" placeholder="Заполни("
+            <input id="r" class="form__input__field" type="number" placeholder="Заполни(" max="3600"
                    min="1" value="1" required>
         </div>
         <input type="submit" value="Запустить симуляцию" class="form__submit" id="submitButton">
